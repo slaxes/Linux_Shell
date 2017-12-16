@@ -5,14 +5,14 @@ do
 	case $arg in
 		n)
 			if [ "$OPTARG" = "-d" ];then
-				echo  usage: 4.file_size.sh [-n N] [-d DIR]
+				echo usage: sh 4.file_size.sh [-n N] [-d DIR]
 				exit 0
 			fi
 			number=$OPTARG
 			;;
 		d)
 			if [ "$OPTARG" = "-n" ];then
-				echo usage: 4.file_size.sh [-n N] [-d DIR]
+				echo usage: sh 4.file_size.sh [-n N] [-d DIR]
 				exit 0
 			fi
 			directory=$OPTARG
@@ -33,7 +33,7 @@ if [ "$number" -gt "$total" ]||[ "$number" -eq 0 ];then #-n不标准则全部输
 	done
 	exit 0
 elif [ "$number" -lt 0 ];then #小于0则反馈usage 
-	echo usage: 4.file_size.sh [-n N] [-d DIR]
+	echo usage: sh 4.file_size.sh [-n N] [-d DIR]
 	exit 0
 else #正常情况
 	for i in $(seq 1 $number)

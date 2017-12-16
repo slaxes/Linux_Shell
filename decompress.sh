@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ $# -eq 0 ];then
-	echo usage: 2.self_compression.sh [--list] or [sourse compressed file] [Destination path]
+	echo usage: ./2.self_compression.sh [--list] or [sourse compressed file] [Destination path]
 	exit 2
 elif [ "$1" = "--list" ];then
 	echo Supported types: zip tar tar.gz tar.bz2
